@@ -1,0 +1,18 @@
+.blue {
+    background-color: blue;
+    color: white;
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+#change-button {
+    color: white;
+    background-color: brown;
+    height: 50px;
+    width: 150px;
+    margin: 5px;
+    border-radius: 5px;
+}
