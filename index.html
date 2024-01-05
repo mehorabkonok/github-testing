@@ -6,6 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub testing</title>
     <link rel="stylesheet" href="/styles.css">
+    <style>
+        .day-theme {
+            background-color: rgba(255, 0, 0, 0.307);
+        }
+
+        .night-theme {
+            background-color: rgba(0, 0, 255, 0.307);
+        }
+
+
+
+        .red {
+            background-color: red;
+            color: white;
+        }
+
+        .blue {
+            background-color: blue;
+            color: white;
+        }
+
+        .button {
+            color: white;
+            background-color: brown;
+            height: 50px;
+            width: 150px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,7 +46,30 @@
         <button id="reset-button" class="button">Reset text</button>
     </main>
 
-    <script src="/index.js"></script>
+    <script src="/index.js">
+        let divEl = document.getElementById('content');
+        let buttonEl = document.getElementById('change-button');
+        let clearEl = document.getElementById('clear-button');
+        let mainEl = document.getElementById('main');
+        let resetEl = document.getElementById('reset-button');
+
+        buttonEl.addEventListener('click', function () {
+            console.log('Button has toggeled');
+            divEl.classList.toggle('blue');
+
+            mainEl.classList.toggle('night-theme');
+        })
+
+        clearEl.addEventListener('click', function () {
+            console.log('Cleared!');
+            divEl.innerText = '';
+        })
+
+        resetEl.addEventListener('click', function () {
+            console.log('Reset text.');
+            divEl.innerHTML = 'Hello . This is programming hero GitHub Testing';
+        })
+    </script>
 </body>
 
 </html>
